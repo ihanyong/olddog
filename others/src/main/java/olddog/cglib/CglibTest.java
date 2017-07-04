@@ -1,4 +1,4 @@
-package com.monkey.olddog.cglib;/**
+package olddog.cglib;/**
  * Created by hanyong on 2017/5/23.
  */
 

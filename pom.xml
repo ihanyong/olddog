@@ -7,50 +7,56 @@
     <groupId>com.monkey</groupId>
     <artifactId>old.dog</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>others</module>
+    </modules>
+    <packaging>pom</packaging>
 
-    <dependencies>
-        <!--<dependency>-->
+    <dependencyManagement>
+
+        <dependencies>
+            <!--<dependency>-->
             <!--<groupId>org.elasticsearch.client</groupId>-->
             <!--<artifactId>transport</artifactId>-->
             <!--<version>5.2.2</version>-->
-        <!--</dependency>-->
+            <!--</dependency>-->
 
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib-nodep</artifactId>
-            <version>3.2.5</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.debop</groupId>
-            <artifactId>hibernate-redis</artifactId>
-            <version>2.3.2</version>
-        </dependency>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib-nodep</artifactId>
+                <version>3.2.5</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.debop</groupId>
+                <artifactId>hibernate-redis</artifactId>
+                <version>2.3.2</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch</artifactId>
-            <version>2.4.4</version>
-        </dependency>
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>2.4.4</version>
+            </dependency>
 
-        <dependency>
-            <groupId>com.github.debop</groupId>
-            <artifactId>hibernate-redis</artifactId>
-            <version>2.3.2</version>
-        </dependency>
+            <dependency>
+                <groupId>com.github.debop</groupId>
+                <artifactId>hibernate-redis</artifactId>
+                <version>2.3.2</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>1.11.1.RELEASE</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-jpa</artifactId>
+                <version>1.11.1.RELEASE</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.fusesource.mqtt-client</groupId>
-            <artifactId>mqtt-client</artifactId>
-            <version>1.14</version>
-        </dependency>
-    </dependencies>
+            <dependency>
+                <groupId>org.fusesource.mqtt-client</groupId>
+                <artifactId>mqtt-client</artifactId>
+                <version>1.14</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
 

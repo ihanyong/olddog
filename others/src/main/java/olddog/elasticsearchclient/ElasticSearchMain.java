@@ -1,7 +1,6 @@
-package com.monkey.olddog.elasticsearchclient;/**
+package olddog.elasticsearchclient;/**
  * Created by hanyong on 2017/3/31.
  */
-
 
 
 import org.elasticsearch.action.search.SearchResponse;
@@ -12,7 +11,6 @@ import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.index.query.GeoDistanceQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.search.SearchHit;
-import org.elasticsearch.search.SearchHits;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
