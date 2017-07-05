@@ -3,14 +3,12 @@ package com.monkey.reactivex1;
 import rx.Observable;
 import rx.Subscriber;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by Administrator on 2017/7/5.
  */
 public class FirstTest {
-    public static void main(String[] args) {
-        testCreate(5);
-
-    }
 
 
     static Subscriber subscriber1 = new Subscriber<Integer>() {
@@ -88,8 +86,27 @@ public class FirstTest {
         observable.subscribe(subscriber1);
         observable.subscribe(subscriber2);
 
+    }
 
+
+    static void testInterval() {
+        // 主线程一停, 这个就停了
+        Observable.interval(0, 2, TimeUnit.SECONDS).subscribe(next -> {System.out.println(System.currentTimeMillis() + " : " + next);});
+
+        int count = 0;
+        while (count++ <20) {
+            try {
+                Thread.sleep( 1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        testInterval();
 
     }
+
 
 }
