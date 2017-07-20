@@ -1,8 +1,7 @@
-package com.monkey.olddog.java8.streams;/**
+package olddog.java8.streams;/**
  * Created by hanyong on 2017/4/28.
  */
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
