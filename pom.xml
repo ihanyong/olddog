@@ -11,6 +11,8 @@
         <module>others</module>
         <module>reactivex1</module>
         <module>reactivex2</module>
+        <module>test.nio</module>
+        <module>leetcode</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -56,6 +58,23 @@
                 <groupId>org.fusesource.mqtt-client</groupId>
                 <artifactId>mqtt-client</artifactId>
                 <version>1.14</version>
+            </dependency>
+            <dependency>
+                <groupId>org.fusesource.mqtt-client</groupId>
+                <artifactId>mqtt-client</artifactId>
+                <version>1.14</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.2.3</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.1.13.Final</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
