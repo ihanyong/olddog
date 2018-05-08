@@ -13,9 +13,31 @@
         <module>reactivex2</module>
         <module>test.nio</module>
         <module>leetcode</module>
+        <module>test.netty</module>
+        <module>hackerrank</module>
+        <module>cglibtest</module>
+        <module>modelMapper</module>
+        <module>Java8InAction</module>
+        <module>testJavaFx</module>
     </modules>
     <packaging>pom</packaging>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
     <dependencyManagement>
 
         <dependencies>
