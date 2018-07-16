@@ -13,6 +13,7 @@
         <module>reactivex2</module>
         <module>test.nio</module>
         <module>leetcode</module>
+        <module>correct</module>
         <module>test.netty</module>
         <module>hackerrank</module>
         <module>cglibtest</module>
@@ -88,7 +89,11 @@
                 <artifactId>mqtt-client</artifactId>
                 <version>1.14</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.github.wxpay</groupId>
+                <artifactId>wxpay-sdk</artifactId>
+                <version>0.0.3</version>
+            </dependency>
 
             <dependency>
                 <groupId>ch.qos.logback</groupId>
