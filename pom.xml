@@ -20,6 +20,8 @@
         <module>modelMapper</module>
         <module>Java8InAction</module>
         <module>testJavaFx</module>
+        <module>testMybatis</module>
+        <module>nio_test</module>
     </modules>
     <packaging>pom</packaging>
 

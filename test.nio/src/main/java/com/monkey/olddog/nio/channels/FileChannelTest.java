@@ -8,6 +8,7 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.Calendar;
 
 /**
@@ -49,13 +50,16 @@ public class FileChannelTest {
 
             int count = channel.read(buffer);
             while (-1 != count) {
+                // todo 这里想怎么试？
 
                 buffer.flip();
-
-                byte[] bytes = new byte[2];
-
                 while (buffer.hasRemaining()) {
+                    byte[] bytes = new byte[buffer.remaining()];
                     buffer.get(bytes);
+                    for (int i = 0; i < bytes.length; i++) {
+                        System.out.print(bytes[i] + ", ");
+                    }
+                    System.out.println("");
                 }
 
                 buffer.clear();
