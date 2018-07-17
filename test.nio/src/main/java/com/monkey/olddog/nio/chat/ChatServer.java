@@ -259,11 +259,13 @@ public class ChatServer {
         private ByteBuffer genHead(short type, long from, long to, long len) {
             ByteBuffer bb = ByteBuffer.allocate(26);
             bb.putShort(type).putLong(from).putLong(to).putLong(len);
+            bb.flip();
             return bb;
         }
 
         private void doLogin(long fromKey, SocketChannel ch) {
             addChannel(ch);
+            regiesteredChannel.put(fromKey, ch);
             logger.info("user {} login", fromKey);
         }
         private void doLogout(long fromKey,SelectionKey selectionKey, SocketChannel ch) {

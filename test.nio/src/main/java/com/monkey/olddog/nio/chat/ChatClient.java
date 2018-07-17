@@ -15,7 +15,7 @@ import java.util.Scanner;
 /**
  * Created by HanYong on 2018/7/17.
  *
-
+ * todo channel close
  *
  *
  *
@@ -39,6 +39,7 @@ public class ChatClient {
                 ByteBuffer head = ByteBuffer.allocate(26);
                 try {
                     read(head, sc);
+                    head.flip();
                     short type = head.getShort();
                     long from = head.getLong();
                     long to = head.getLong();
@@ -47,6 +48,7 @@ public class ChatClient {
                     if (2 == type) {
                         ByteBuffer bodyBuff = ByteBuffer.allocate((int)bodyLen);
                         read(bodyBuff, sc);
+                        bodyBuff.flip();
                         logger.info("{} --> {} : {}", from, to, StandardCharsets.UTF_8.decode(bodyBuff).toString());
                     }
                 } catch (IOException e) {
@@ -136,6 +138,7 @@ public class ChatClient {
     private ByteBuffer genHead(short type, long from, long to, long len) {
         ByteBuffer bb = ByteBuffer.allocate(26);
         bb.putShort(type).putLong(from).putLong(to).putLong(len);
+        bb.flip();
         return bb;
     }
 
