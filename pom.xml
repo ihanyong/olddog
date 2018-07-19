@@ -22,6 +22,7 @@
         <module>testJavaFx</module>
         <module>testMybatis</module>
         <module>nio_test</module>
+        <module>testConcurrency</module>
     </modules>
     <packaging>pom</packaging>
 
