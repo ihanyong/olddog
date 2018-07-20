@@ -4,15 +4,19 @@ import old.dog.test.concurrency.ThreadUtil;
 
 /**
  * Created by HanYong on 2018/7/20.
+ *
+ * 这个 volatile 是搞什么鬼的呢, 这里的用法应该不对, 运行的结果是错误的.
+ * 这里实现了三种 entityI, 一个什么都不用的, 一个用volatile修饰状态, 一个使用synchronized个修饰所有方法
+ * 现在看只有synchronized是ok的. todo 这个volatile 是用法还要进一步深究.
+ *
  */
 public class TestVolatileAndSynchronized {
 
     public static void main(String[] args) {
         int runTimes = 50000;
+        run(runTimes, new EntityImpl());
         run(runTimes, new EntityVolatile());
-        run(runTimes, new EntityNoVolatile());
         run(runTimes, new EntitySyn());
-
     }
 
     public static void run(int times, EntityI e) {
@@ -51,7 +55,7 @@ public class TestVolatileAndSynchronized {
         int getValue();
     }
 
-    public static class EntityNoVolatile implements EntityI{
+    public static class EntityImpl implements EntityI{
         private int i;
         public int increase() {
             i = i + 1;
