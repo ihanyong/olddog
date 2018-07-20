@@ -2,12 +2,14 @@ package old.dog.test.concurrency.volatilet;
 
 import old.dog.test.concurrency.ThreadUtil;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * Created by HanYong on 2018/7/20.
  *
  * 这个 volatile 是搞什么鬼的呢, 这里的用法应该不对, 运行的结果是错误的.
- * 这里实现了三种 entityI, 一个什么都不用的, 一个用volatile修饰状态, 一个使用synchronized个修饰所有方法
- * 现在看只有synchronized是ok的. todo 这个volatile 是用法还要进一步深究.
+ * 这里实现了四种 entityI, 一个什么都不用的, 一个用volatile修饰状态, 一个使用synchronized个修饰所有方法, 一个使用 atomicInteger
+ * 现在看只有synchronized和atomicInteger是ok的. todo 这个volatile 是用法还要进一步深究.
  *
  */
 public class TestVolatileAndSynchronized {
@@ -17,6 +19,7 @@ public class TestVolatileAndSynchronized {
         run(runTimes, new EntityImpl());
         run(runTimes, new EntityVolatile());
         run(runTimes, new EntitySyn());
+        run(runTimes, new EntityAtomic());
     }
 
     public static void run(int times, EntityI e) {
@@ -87,4 +90,19 @@ public class TestVolatileAndSynchronized {
             return i;
         }
     }
+
+    public static class EntityAtomic implements EntityI {
+        private AtomicInteger i = new AtomicInteger();
+
+        @Override
+        public int increase() {
+            return i.addAndGet(1);
+        }
+
+        @Override
+        public int getValue() {
+            return i.get();
+        }
+    }
+
 }
