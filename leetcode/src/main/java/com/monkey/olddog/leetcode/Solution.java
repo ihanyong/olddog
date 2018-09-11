@@ -7,7 +7,6 @@ package com.monkey.olddog.leetcode;/**
  * @Date 2017/7/19
  */
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 

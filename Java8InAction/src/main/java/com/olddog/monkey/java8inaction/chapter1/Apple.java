@@ -16,5 +16,4 @@ public class Apple {
     public boolean isAccepted() {
         return "red".equals(getColor()) && getWeight() > 200;
     }
-
 }
