@@ -23,6 +23,7 @@
         <module>testMybatis</module>
         <module>nio_test</module>
         <module>testConcurrency</module>
+        <module>captureYaSiGeFiles</module>
     </modules>
     <packaging>pom</packaging>
 
