@@ -10,12 +10,10 @@ public class Solution {
 
     public String reverseString(String s) {
         char[] chars = s.toCharArray();
-        for (int i = 0; i < (chars.length - 1) / 2; i++) {
-            if (i != chars.length - 1 - i) {
+        for (int i = 0; i < chars.length / 2; i++) {
                 char t = chars[i];
                 chars[i] = chars[chars.length - 1 - i];
                 chars[chars.length - 1 - i] = t;
-            }
         }
         return String.valueOf(chars);
     }
