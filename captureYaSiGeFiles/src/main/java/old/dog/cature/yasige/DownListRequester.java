@@ -20,7 +20,7 @@ import java.util.List;
  * DownListRequester
  *
  * @author yong.han
- * 2018/9/20
+ * 2018/9/20≤
  */
 @Data @Builder
 public class DownListRequester {

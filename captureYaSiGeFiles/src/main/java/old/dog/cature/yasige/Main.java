@@ -19,17 +19,9 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        CloseableHttpClient httpClient = HttpClients.createDefault();
-
-        HttpPost request = new HttpPost();
 
 
-        CloseableHttpResponse response = httpClient.execute(request);
 
-        HttpEntity entity = response.getEntity();
-        entity.getContent();
-
-        httpClient.close();
     }
 
 }

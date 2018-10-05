@@ -7,6 +7,8 @@ package com.monkey.olddog.leetcode;/**
  * @Date 2017/7/19
  */
 
+import com.monkey.olddog.leetcode.LinkList.ListNode;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -134,9 +136,4 @@ public class Solution {
 
 }
 
-class ListNode{
-    int val;
-    ListNode next;
-    ListNode(int x ) { val = x;}
-}
 
