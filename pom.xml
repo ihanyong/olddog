@@ -25,6 +25,8 @@
         <module>testConcurrency</module>
         <module>captureYaSiGeFiles</module>
         <module>DisruptorExample</module>
+        <module>prometheusExample</module>
+        <module>suanFaTuJie</module>
     </modules>
     <packaging>pom</packaging>
 
