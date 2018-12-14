@@ -13,7 +13,7 @@
         <module>reactivex2</module>
         <module>test.nio</module>
         <module>leetcode</module>
-        <!--<module>correct</module>-->
+        <module>correct</module>
         <module>test.netty</module>
         <module>hackerrank</module>
         <module>cglibtest</module>
@@ -21,10 +21,13 @@
         <module>Java8InAction</module>
         <module>testJavaFx</module>
         <module>testMybatis</module>
-        <!--<module>nio_test</module>-->
+        <module>nio_test</module>
         <module>testConcurrency</module>
         <module>captureYaSiGeFiles</module>
-        <module>disruptor.example</module>
+        <module>DisruptorExample</module>
+        <module>prometheusExample</module>
+        <module>suanFaTuJie</module>
+        <module>concurrentExample</module>
     </modules>
     <packaging>pom</packaging>
 
