@@ -28,6 +28,8 @@
         <module>prometheusExample</module>
         <module>suanFaTuJie</module>
         <module>concurrentExample</module>
+        <module>ronmano-reflections</module>
+        <module>ClassLoaderExample</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -30,7 +30,13 @@ public class HelloWorld extends Application {
             private int times = 1;
             @Override
             public void handle(ActionEvent event) {
-                System.out.println(MessageFormat.format("Say 'hello world' {0, number, 000} times on {1,date,yyyy-MM-dd HH:mm:ss:SSS}", times++, new Date()));
+//                Button button1= (Button) event.getSource();
+//                button1.setText("hello");
+
+                String msg = MessageFormat.format("Say 'hello world' {0, number, 000} times on {1,date,yyyy-MM-dd HH:mm:ss:SSS}", times++, new Date());
+                primaryStage.setTitle(msg);
+
+                System.out.println(msg);
             }
         });
 
