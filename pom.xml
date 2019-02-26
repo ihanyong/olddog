@@ -30,6 +30,7 @@
         <module>concurrentExample</module>
         <module>ronmano-reflections</module>
         <module>ClassLoaderExample</module>
+        <module>kafka-consumer</module>
     </modules>
     <packaging>pom</packaging>
 
