@@ -57,6 +57,13 @@ public class SerializableObjectExample {
         book.setPublisher("zhonghuashuju");
         System.out.println(book);
 
+
+        Book book2 = new Book();
+        book2.setAuthor("曹禺");
+        book2.setName("雷雨");
+        book2.setPublisher("人民出版社");
+        System.out.println(book2);
+
 //        Book backBook = (Book) testInMemory(book);
 //        Book backBook = (Book) testWithFile("E:\\myspace\\diary\\book.obj", book);
         Book backBook = (Book) readObjFile("E:\\myspace\\diary\\book.obj");
