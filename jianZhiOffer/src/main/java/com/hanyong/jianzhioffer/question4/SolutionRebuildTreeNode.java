@@ -1,10 +1,12 @@
 package com.hanyong.jianzhioffer.question4;
 
+import com.hanyong.jianzhioffer.TreeNode;
+
 import java.text.MessageFormat;
 import java.util.Arrays;
 
 /**
- * Solution
+ * SolutionRebuildTreeNode
  *
  * 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。
  * 假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -12,10 +14,10 @@ import java.util.Arrays;
  * @author yong.han
  * 2019/4/8
  */
-public class Solution {
+public class SolutionRebuildTreeNode {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        SolutionRebuildTreeNode solution = new SolutionRebuildTreeNode();
 
 //        int[] pre = new int[]{1,2,3};
 //        int[] in = new int[]{2,1,3};
@@ -73,10 +75,4 @@ public class Solution {
     }
 
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
 }
