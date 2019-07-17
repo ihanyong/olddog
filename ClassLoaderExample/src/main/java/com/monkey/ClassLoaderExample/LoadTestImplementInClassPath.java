@@ -14,6 +14,6 @@ public class LoadTestImplementInClassPath implements LoadTestInterface {
 
     @Override
     public void test(String string) {
-        System.out.println(MessageFormat.format("hello , you send me the message of [ {0} ]", string));
+        System.out.println(MessageFormat.format("dang dang hello , you send me the message of [ {0} ]", string));
     }
 }

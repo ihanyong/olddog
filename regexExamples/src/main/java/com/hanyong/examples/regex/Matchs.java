@@ -29,6 +29,8 @@ public class Matchs {
 //    public static final Pattern imgPattern = Pattern.compile("<img *[ \\w./\"]*src=\"([\\w/.-_]+)\" [ \\w./\"]*>");
     public static final Pattern imgPattern = Pattern.compile("<img[ \\w./\"%=]*src=\"([\\w/.-_]+)\"[ \\w./\"%=]*>");
 
+    private static final int batchSize = 2048*10;
+
     public static void main(String[] args) throws IOException {
 //        String img =  "<img src=\"../fig/levels_of_abstraction.svg\" alt=\"Programming levels of abstraction\" class=\"offset\" width=\"80%\">";
 //        Matcher m = imgPattern.matcher(img);
@@ -37,8 +39,8 @@ public class Matchs {
 //            System.out.println(m.group(1));
 //
 //        }
-//        String url = "https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html";
-        String url = "https://www.19lou.com/forum-9-thread-10611557216517058-1-1.html";
+        String url = "https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html";
+//        String url = "https://www.19lou.com/forum-9-thread-10611557216517058-1-1.html";
         String dir = "D:/test/images";
         downloadPicFromPage(url, dir);
     }
@@ -96,12 +98,13 @@ public class Matchs {
         filePath.getParent().toFile().mkdirs();
 
 
+        long begin = System.currentTimeMillis();
         try (InputStream inputStream = url.openStream();
              ReadableByteChannel remoteFile = Channels.newChannel(inputStream);
              FileChannel localFile = FileChannel.open(filePath, CREATE, WRITE);
         ) {
 
-            ByteBuffer bf = ByteBuffer.allocate(2048);
+            ByteBuffer bf = ByteBuffer.allocate(batchSize);
             bf.clear();
             long bts = 0;
             while ((bts += remoteFile.read(bf)) > 0) {
@@ -109,7 +112,8 @@ public class Matchs {
                 localFile.write(bf);
                 bf.clear();
             }
-            System.out.println("download " + fileName + " completed!");
+
+            System.out.println("download " + fileName + " completed! cost " + (System.currentTimeMillis() - begin) + "ms");
         }
 //        URL url = new URL("https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/batch/");
 //        Object content = url.getContent();

@@ -9,7 +9,7 @@ package com.monkey.ClassLoaderExample;
 public class LoadTestImplement implements LoadTestInterface {
     @Override
     public void test(String string) {
-        System.out.println("这是个什么东西： " + string);
+        System.out.println("---这是个什么东西： " + string);
 
     }
 }
